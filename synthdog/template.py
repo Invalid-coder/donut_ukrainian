@@ -104,8 +104,8 @@ class SynthDoG(templates.Template):
         os.makedirs(os.path.dirname(metadata_filepath), exist_ok=True)
 
         metadata = self.format_metadata(image_filename=image_filename, keys=["text_sequence"], values=[label])
-        with open(metadata_filepath, "a") as fp:
-            json.dump(metadata, fp, ensure_ascii=False)
+        with open(metadata_filepath, "a", encoding='ascii') as fp:
+            json.dump(metadata, fp, ensure_ascii=True)
             fp.write("\n")
 
     def end_save(self, root):
@@ -125,6 +125,6 @@ class SynthDoG(templates.Template):
         for k, v in zip(keys, values):
             _gt_parse_v[k] = v
         gt_parse = {"gt_parse": _gt_parse_v}
-        gt_parse_str = json.dumps(gt_parse, ensure_ascii=False)
+        gt_parse_str = json.dumps(gt_parse, ensure_ascii=True)
         metadata = {"file_name": image_filename, "ground_truth": gt_parse_str}
         return metadata
