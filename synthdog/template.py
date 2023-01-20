@@ -63,14 +63,14 @@ class SynthDoG(templates.Template):
         self.effect.apply([layer])
 
         image = layer.output(bbox=[0, 0, *size])
-        label = " ".join(texts).encode('utf-8')
+        label = " ".join(texts)
         label = label.strip()
         label = re.sub(r"\s+", " ", label)
         quality = np.random.randint(self.quality[0], self.quality[1] + 1)
 
         data = {
             "image": image,
-            "label": label,
+            "label": label.encode('utf-8'),
             "quality": quality,
             "roi": roi,
         }
