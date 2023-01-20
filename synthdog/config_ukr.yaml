@@ -32,7 +32,7 @@ document:
   content:
     margin: [0, 0.1]
     text:
-      path: resources/corpus/ukrwiki.txt
+      path: resources/corpus/readme.txt
     font:
       paths: [resources/font/uk]
       weights: [1]
