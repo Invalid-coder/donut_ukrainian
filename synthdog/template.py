@@ -104,7 +104,7 @@ class SynthDoG(templates.Template):
         os.makedirs(os.path.dirname(metadata_filepath), exist_ok=True)
 
         metadata = self.format_metadata(image_filename=image_filename, keys=["text_sequence"], values=[label])
-        with open(metadata_filepath, "a", encoding='ascii') as fp:
+        with open(metadata_filepath, "a") as fp:
             json.dump(metadata, fp, ensure_ascii=True)
             fp.write("\n")
 
