@@ -122,10 +122,10 @@ class SynthDoG(templates.Template):
         assert len(keys) == len(values), "Length does not match: keys({}), values({})".format(len(keys), len(values))
 
         _gt_parse_v = dict()
-        print(values)
+ 
         for k, v in zip(keys, values):
             _gt_parse_v[k] = v
         gt_parse = {"gt_parse": _gt_parse_v}
-        gt_parse_str = json.dumps(gt_parse, ensure_ascii=True)
+        gt_parse_str = json.dumps(gt_parse, ensure_ascii=False)
         metadata = {"file_name": image_filename, "ground_truth": gt_parse_str}
         return metadata
