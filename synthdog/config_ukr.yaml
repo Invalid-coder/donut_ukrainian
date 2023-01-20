@@ -34,7 +34,7 @@ document:
     text:
       path: resources/corpus/readme.txt
     font:
-      paths: [resources/font/uk]
+      paths: [resources/font/en]
       weights: [1]
       bold: 0
     layout:
