@@ -70,7 +70,7 @@ class SynthDoG(templates.Template):
 
         data = {
             "image": image,
-            "label": label.encode('utf-8'),
+            "label": label,
             "quality": quality,
             "roi": roi,
         }
@@ -123,7 +123,7 @@ class SynthDoG(templates.Template):
 
         _gt_parse_v = dict()
         for k, v in zip(keys, values):
-            _gt_parse_v[k] = v
+            _gt_parse_v[k] = v.encode('utf-8')
         gt_parse = {"gt_parse": _gt_parse_v}
         gt_parse_str = json.dumps(gt_parse, ensure_ascii=False)
         metadata = {"file_name": image_filename, "ground_truth": gt_parse_str}
