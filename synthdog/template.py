@@ -123,6 +123,7 @@ class SynthDoG(templates.Template):
 
         _gt_parse_v = dict()
         for k, v in zip(keys, values):
+            print(v)
             _gt_parse_v[k] = v
         gt_parse = {"gt_parse": _gt_parse_v}
         gt_parse_str = json.dumps(gt_parse, ensure_ascii=True)
