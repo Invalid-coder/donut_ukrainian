@@ -123,7 +123,7 @@ class SynthDoG(templates.Template):
 
         _gt_parse_v = dict()
         for k, v in zip(keys, values):
-            _gt_parse_v[k] = v.encode('utf-8')
+            _gt_parse_v[k] = v
         gt_parse = {"gt_parse": _gt_parse_v}
         gt_parse_str = json.dumps(gt_parse, ensure_ascii=False)
         metadata = {"file_name": image_filename, "ground_truth": gt_parse_str}
