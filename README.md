@@ -1,6 +1,7 @@
 # donut_ukrainian
 
-##Step #1
+## Step #1
+
 Go to "/content/donut/config" folder, add a new file called "train_ubiai.yaml" and copy the following config rows in it:
 
 resume_from_checkpoint_path: null # only used for resume_from_checkpoint option in PL
@@ -26,15 +27,16 @@ check_val_every_n_epoch: 3
 gradient_clip_val: 1.0
 verbose: True
 
-##Step 2
+## Step 2
+
 pip install -r requirements.txt
 
-##Step 3
+## Step 3
 
 train the model
 !cd donut && python train.py --config config/train_ubiai.yaml
 
-##Step 4
+## Step 4
 
 Test fine-tuned donut model
 
