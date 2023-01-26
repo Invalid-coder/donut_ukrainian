@@ -34,6 +34,7 @@ pip install -r requirements.txt
 ## Step 3
 
 train the model
+
 !cd donut && python train.py --config config/train_ubiai.yaml
 
 ## Step 4
