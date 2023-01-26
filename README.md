@@ -1,6 +1,6 @@
 # donut_ukrainian
 
-## Step #1
+## Step 1
 
 Go to "/content/donut/config" folder, add a new file called "train_ubiai.yaml" and copy the following config rows in it:
 
