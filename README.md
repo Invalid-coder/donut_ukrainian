@@ -2,7 +2,12 @@
 
 ## Step 1
 
-Go to "/content/donut/config" folder, add a new file called "train_ubiai.yaml" and copy the following config rows in it:
+git clone https://github.com/clovaai/donut.git \
+cd donut && pip install .
+
+## Step 2
+
+Go to "/donut/config" folder, add a new file called "train_ubiai.yaml" and copy the following config rows in it:
 
 resume_from_checkpoint_path: null # only used for resume_from_checkpoint option in PL\
 result_path: "/content/drive/MyDrive/Invoice dataset/UBIAI_dataset/processed_dataset/result"
@@ -26,11 +31,6 @@ val_check_interval: 1.0\
 check_val_every_n_epoch: 3\
 gradient_clip_val: 1.0\
 verbose: True
-
-## Step 2
-
-git clone https://github.com/clovaai/donut.git \
-cd donut && pip install .
 
 ## Step 3
 
