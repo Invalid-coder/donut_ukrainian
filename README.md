@@ -29,7 +29,7 @@ verbose: True
 
 ## Step 2
 
-!git clone https://github.com/clovaai/donut.git
+!git clone https://github.com/clovaai/donut.git \
 !cd donut && pip install .
 
 ## Step 3
