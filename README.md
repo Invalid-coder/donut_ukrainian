@@ -29,14 +29,14 @@ verbose: True
 
 ## Step 2
 
-!git clone https://github.com/clovaai/donut.git \
-!cd donut && pip install .
+git clone https://github.com/clovaai/donut.git \
+cd donut && pip install .
 
 ## Step 3
 
 train the model
 
-!cd donut && python train.py --config config/train_ubiai.yaml
+cd donut && python train.py --config config/train_ubiai.yaml
 
 ## Step 4
 
