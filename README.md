@@ -8,7 +8,7 @@ resume_from_checkpoint_path: null # only used for resume_from_checkpoint option 
 result_path: "/content/drive/MyDrive/Invoice dataset/UBIAI_dataset/processed_dataset/result"
 pretrained_model_name_or_path: "naver-clova-ix/donut-base" # loading a pre-trained model (from moldehub or path)\
 dataset_name_or_paths: ["/content/drive/MyDrive/Invoice dataset/UBIAI_dataset/processed_dataset"] # loading datasets (from moldehub or path)\
-sort_json_key: False # cord dataset is preprocessed, and publicly available at https://huggingface.co/datasets/naver-clova-ix/cord-v2\
+sort_json_key: False # cord dataset is preprocessed, and publicly available at https://huggingface.co/datasets/naver-clova-ix/cord-v2
 train_batch_sizes: [1]\
 val_batch_sizes: [1]\
 input_size: [1280, 960] # when the input resolution differs from the pre-training setting, some weights will be newly initialized (but the model training would be okay)\
