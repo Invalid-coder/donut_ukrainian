@@ -29,7 +29,8 @@ verbose: True
 
 ## Step 2
 
-pip install -r requirements.txt
+!git clone https://github.com/clovaai/donut.git
+!cd donut && pip install .
 
 ## Step 3
 
