@@ -5,7 +5,6 @@
 Go to "/content/donut/config" folder, add a new file called "train_ubiai.yaml" and copy the following config rows in it:
 
 resume_from_checkpoint_path: null # only used for resume_from_checkpoint option in PL
-
 result_path: "/content/drive/MyDrive/Invoice dataset/UBIAI_dataset/processed_dataset/result"
 
 pretrained_model_name_or_path: "naver-clova-ix/donut-base" # loading a pre-trained model (from moldehub or path)
