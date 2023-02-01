@@ -1,3 +1,4 @@
+import os
 import argparse
 import pandas as pd
 from faker import Faker
@@ -20,8 +21,11 @@ if __name__ == '__main__':
     dataframe = pd.read_excel(templates_path)
     low = 0
 
-    with open('input.txt', 'w') as x:
-        with open('target.txt', 'w') as y:
+    if not os.path.exists(result_path):
+        os.makedirs(result_path)
+
+    with open(result_path + '/input.txt', 'w') as x:
+        with open(result_path + '/target.txt', 'w') as y:
             for i in range(len(dataframe['input'])):
                 for j in range(int(samples_amount)):
                     address = fake.address()
