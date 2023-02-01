@@ -18,13 +18,21 @@ if __name__ == '__main__':
     fake = Faker('uk_UA')
     Faker.seed()
     dataframe = pd.read_excel(templates_path)
+    low = 0
 
     with open('input.txt', 'w') as x:
         with open('target.txt', 'w') as y:
             for i in range(len(dataframe['input'])):
                 for j in range(int(samples_amount)):
                     address = fake.address()
+                    data = dataframe['input'][i].split('?address')
+                    low += len(data[0])
                     x.write(dataframe['input'][i].replace('?address', address))
                     x.write('\n')
-                    y.write(dataframe['target'][i].replace('?address', address))
+                    high = str(low + len(address) - 1)
+                    target = "loc {} {} ".format(str(low), str(high))
+                    target += address
+                    y.write(target)
                     y.write('\n')
+                    low += len(address) + len(data[1]) - 1
+
