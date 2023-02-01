@@ -23,8 +23,8 @@ if __name__ == '__main__':
         with open('target.txt', 'w') as y:
             for i in range(len(dataframe['input'])):
                 for j in range(int(samples_amount)):
-                    adress = fake.address()
-                    x.write(dataframe['input'][i].replace('?adress', adress))
+                    address = fake.address()
+                    x.write(dataframe['input'][i].replace('?address', address))
                     x.write('\n')
-                    y.write(dataframe['target'][i].replace('?adress', adress))
+                    y.write(dataframe['target'][i].replace('?address', address))
                     y.write('\n')
