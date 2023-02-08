@@ -6,9 +6,9 @@ pip install Faker
 
 ## Step 2
 
-Generate text with adresses
+Generate text with addresses
 
-python adress_generator.py --templates_path templates.xlsx --result_path result --random_seed 0 --samples_amount 10
+python address_generator.py --templates_path templates.xlsx --result_path result --random_seed 0 --samples_amount 10
 
 - templates_path - path to the templates file
 - result_path - path to the result folder
