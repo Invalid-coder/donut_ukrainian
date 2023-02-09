@@ -12,7 +12,7 @@ python address_generator.py --templates_path templates.xlsx --result_path result
 
 ## Step 3
 
-Generate text with addresses and organization names, full names
+Generate text with addresses, organization names and full names
 
 python text_generator.py --templates_path templates.xlsx --result_path result --random_seed 0 --samples_amount 10
 
