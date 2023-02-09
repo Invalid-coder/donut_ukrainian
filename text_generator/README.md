@@ -3,6 +3,8 @@
 ## Step 1
 
 pip install Faker
+pip install pandas
+pip install openpyxl
 
 ## Step 2
 
