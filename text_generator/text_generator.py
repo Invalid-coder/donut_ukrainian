@@ -43,8 +43,8 @@ if __name__ == '__main__':
   generators = [fake.name, fake.company, fake.address]
   replacements = ["?org_name", "?full_name", "?address"]
   
-  with open(result_path + '/input.txt', 'w') as x:
-    with open(result_path + '/target.txt', 'w') as y:
+  with open(result_path + '/input.txt', 'w', encoding='utf-8') as x:
+    with open(result_path + '/target.txt', 'w', encoding='utf-8') as y:
       for i in range(len(dataframe['Subject'])):
         for j in range(int(samples_amount)):
           sample = ''
