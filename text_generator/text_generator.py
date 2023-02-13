@@ -12,6 +12,7 @@ def replace(substr, offset):
     replacement, generated = replacements[i], generators[i]()
     if replacement in replaced:
       low = len(replaced.split(replacement)[0]) + offset
+      generated = 'ТОВ "{}"'.format(generated) if replacement == "?org_name" else generated
       high = low + len(generated) - 1
       replaced = replaced.replace(replacement,generated)
       boundaries[replacement] = (low, high)
