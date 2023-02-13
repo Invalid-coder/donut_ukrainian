@@ -7,8 +7,6 @@ SynthDoG is synthetic document generator for visual document understanding (VDU)
 ## Prerequisites
 
 - python>=3.6
-- git clone https://github.com/Invalid-coder/donut_ukrainian.git
-- cd donut_ukrainian/synthdog
 - [synthtiger](https://github.com/clovaai/synthtiger) (`pip install synthtiger`)
 
 ## Usage
@@ -51,9 +49,6 @@ Some important arguments:
 
 To generate ECJK samples:
 ```bash
-# ukrainian
-synthtiger -o {dataset_path} -c {num_of_data} -w {num_of_workers} -s {random_seed} -v template.py SynthDoG config_ukr.yaml
-
 # english
 synthtiger -o {dataset_path} -c {num_of_data} -w {num_of_workers} -v template.py SynthDoG config_en.yaml
 
